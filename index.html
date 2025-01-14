@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Lookup Tool</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DNS Lookup Tool</h1>
+        <form id="dns-lookup-form">
+            <label for="domain">Domain Name:</label>
+            <input type="text" id="domain" name="domain" placeholder="example.com" required>
+            
+            <label for="record-type">Record Type:</label>
+            <select id="record-type" name="record-type">
+                <option value="A">A</option>
+                <option value="AAAA">AAAA</option>
+                <option value="CNAME">CNAME</option>
+                <option value="MX">MX</option>
+                <option value="NS">NS</option>
+                <option value="TXT">TXT</option>
+            </select>
+
+            <button type="submit">Lookup</button>
+        </form>
+        <div id="results">
+            <h2>Results:</h2>
+            <pre id="output"></pre>
+        </div>
+    </div>
+</body>
+</html>
